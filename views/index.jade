@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1= title
+
+  #detail
+    form(action="/notions", method="post")
+      textarea(name="notion[body]", autofocus="", rows="2", cols="60")
+      input(type='submit', name='submit', value='Add Notion')
+
+
+  #outstanding
+    ul
+      li Hi
+
+
+
+  script(src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")
+  script(src="/socket.io/socket.io.js")
+  script(src="/javascripts/jade-runtime.js")
+
+  != assets.tag('/templates.js')
+  != assets.tag('/client.js')
+
